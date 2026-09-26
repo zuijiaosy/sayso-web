@@ -2,7 +2,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const host = (process.env.VITE_SITE_URL || 'https://sayso-8j4.pages.dev').replace(/\/$/, '')
+const host = (process.env.VITE_SITE_URL || 'https://sayso-app.pages.dev').replace(/\/$/, '')
 const out = path.resolve('dist/client')
 const pages = ['/', '/download', '/faq']
 const today = new Date().toISOString().slice(0, 10)

@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   // Cloudflare Pages project serving the prerendered static site.
-  "name": "sayso",
+  "name": "sayso-app",
   "compatibility_date": "2026-09-26",
   "pages_build_output_dir": "./dist/client"
 }

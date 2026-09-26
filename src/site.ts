@@ -18,7 +18,7 @@ export const latest = release as {
 export const site = {
   name: '顺口说 Sayso',
   // Absolute origin used for canonical links, Open Graph and the sitemap.
-  url: ((import.meta.env.VITE_SITE_URL as string | undefined) || 'https://sayso-8j4.pages.dev').replace(/\/$/, ''),
+  url: ((import.meta.env.VITE_SITE_URL as string | undefined) || 'https://sayso-app.pages.dev').replace(/\/$/, ''),
   minMacOS: '13',
   sourceUrl: repo,
   releasesUrl: `${repo}/releases/latest`,
