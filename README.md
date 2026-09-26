@@ -2,7 +2,7 @@
 
 顺口说（Sayso）的官方网站：首页（含在线体验）、常见问题、下载页。用 TanStack Start 构建，所有页面在构建时预渲染成静态 HTML，部署到 Cloudflare Pages 免费套餐，不运行任何 Worker 代码。
 
-应用仓库：<https://github.com/zuijiaosy/sayso>
+正式地址：<https://sayso-8j4.pages.dev> · 应用仓库：<https://github.com/zuijiaosy/sayso>
 
 ## 本地开发
 
