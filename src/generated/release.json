@@ -1,21 +1,21 @@
 {
-  "version": "0.2.0",
-  "tag": "v0.2.0",
-  "publishedAt": "2026-09-17T09:11:45Z",
-  "url": "https://github.com/zuijiaosy/sayso/releases/tag/v0.2.0",
+  "version": "0.3.0",
+  "tag": "v0.3.0",
+  "publishedAt": "2026-09-26T03:52:21Z",
+  "url": "https://github.com/zuijiaosy/sayso/releases/tag/v0.3.0",
   "mac": {
-    "name": "Sayso_0.2.0_aarch64.dmg",
-    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.2.0/Sayso_0.2.0_aarch64.dmg",
-    "size": 18146518
+    "name": "Sayso_0.3.0_aarch64.dmg",
+    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.3.0/Sayso_0.3.0_aarch64.dmg",
+    "size": 18150583
   },
   "winExe": {
-    "name": "Sayso_0.2.0_x64-setup.exe",
-    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.2.0/Sayso_0.2.0_x64-setup.exe",
-    "size": 19418284
+    "name": "Sayso_0.3.0_x64-setup.exe",
+    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.3.0/Sayso_0.3.0_x64-setup.exe",
+    "size": 19413521
   },
   "winMsi": {
-    "name": "Sayso_0.2.0_x64_en-US.msi",
-    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.2.0/Sayso_0.2.0_x64_en-US.msi",
-    "size": 38170624
+    "name": "Sayso_0.3.0_x64_en-US.msi",
+    "url": "https://github.com/zuijiaosy/sayso/releases/download/v0.3.0/Sayso_0.3.0_x64_en-US.msi",
+    "size": 38166528
   }
 }
