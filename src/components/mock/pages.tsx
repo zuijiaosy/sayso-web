@@ -685,6 +685,23 @@ export function DictionaryPage({ ctx }: { ctx: Ctx }) {
 }
 
 // ---------- Settings ----------
+function UpdateRow() {
+  const [state, setState] = useState<'idle' | 'checking' | 'done'>('idle')
+  return (
+    <Row title="检查更新" description={state === 'done' ? '已是最新版本。' : '从 GitHub 获取最新版本信息。'}>
+      <Btn
+        disabled={state === 'checking'}
+        onClick={() => {
+          setState('checking')
+          window.setTimeout(() => setState('done'), 800)
+        }}
+      >
+        {state === 'checking' ? '检查中…' : '检查更新'}
+      </Btn>
+    </Row>
+  )
+}
+
 export function SettingsPage({ ctx }: { ctx: Ctx }) {
   const [tab, setTab] = useState<'general' | 'permissions' | 'about'>('general')
   const s = ctx.state
@@ -801,6 +818,7 @@ export function SettingsPage({ ctx }: { ctx: Ctx }) {
             </Btn>
           </Row>
         )}
+        {tab === 'about' && <UpdateRow />}
       </TabbedSection>
     </Page>
   )

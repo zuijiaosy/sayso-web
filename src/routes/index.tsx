@@ -248,7 +248,7 @@ function Home() {
             <ul>
               <li>Tauri 2 + Rust 后端，React 前端</li>
               <li>本地识别不联网，失败时不会悄悄改用云端</li>
-              <li>每次发版，官网和下载链接自动更新到最新版本</li>
+              <li>设置 → 关于 一键检查新版本，覆盖安装不丢权限</li>
             </ul>
             <div className="row">
               <a className="btn" href={site.sourceUrl}>
