@@ -184,7 +184,7 @@ function Home() {
         <div className="sec-head reveal">
           <span className="eyebrow">Features</span>
           <h2>说话的速度，打字的精度</h2>
-          <p>口述、翻译、整理、词典，都围绕一件事：你说完，光标处就是能直接发出去的文字。</p>
+          <p>口述、翻译、整理和词典，目的都是让你说完以后，光标处的文字可以直接发出去。</p>
         </div>
         <div className="features">
           {features.map((f, i) => (
@@ -202,7 +202,7 @@ function Home() {
         <div className="sec-head reveal">
           <span className="eyebrow">Try it</span>
           <h2>不用安装，先在网页上点一点</h2>
-          <p>下面就是顺口说的主窗口，按客户端的界面一比一重建。切页面、拨开关、改快捷键、下载模型、加词条，都能直接操作。</p>
+          <p>下面是照客户端界面一比一重建的顺口说主窗口，可以切页面、拨开关、改快捷键、下载模型、加词条。</p>
         </div>
         <div className="try-hints reveal">
           {tryHints.map((h) => (
@@ -229,7 +229,7 @@ function Home() {
         <div className="sec-head reveal">
           <span className="eyebrow">Privacy</span>
           <h2>你的声音和文字去了哪儿</h2>
-          <p>三种常见配置，哪些数据会离开你的电脑，一眼看清。橙色的线表示穿过了网络边界。</p>
+          <p>下图按三种常见配置，画出哪些数据会离开你的电脑。橙色的线表示数据穿过了网络边界。</p>
         </div>
         <div className="reveal">
           <DataFlow />
@@ -243,12 +243,12 @@ function Home() {
         </div>
         <div className="oss">
           <div className="oss-card reveal">
-            <h3>站在 Handy 的肩膀上</h3>
+            <h3>从 Handy 分叉而来</h3>
             <p>顺口说从开源项目 Handy（MIT）分叉。录音、全局热键、不抢焦点的悬浮窗、可靠粘贴和模型管理沿用上游；翻译模式、文本模型整理、词典和云端识别是新加的。</p>
             <ul>
               <li>Tauri 2 + Rust 后端，React 前端</li>
               <li>本地识别不联网，失败时不会悄悄改用云端</li>
-              <li>设置 → 关于 一键检查新版本，覆盖安装不丢权限</li>
+              <li>在「设置 → 关于」里检查新版本，覆盖安装不用重新授权</li>
             </ul>
             <div className="row">
               <a className="btn" href={site.sourceUrl}>
@@ -305,22 +305,6 @@ function Home() {
           </Link>
         </p>
       </section>
-
-      <div className="wrap">
-        <section className="get reveal">
-          <img src="/mark.svg" alt="" width="88" height="88" />
-          <h2>现在就顺口说一句</h2>
-          <p>免费、开源、本地优先。v{latest.version}，适用于 macOS {site.minMacOS} 及以上。</p>
-          <div className="cta">
-            <a href={primary} className="btn">
-              {primaryLabel}
-            </a>
-            <Link to="/download" className="btn ghost">
-              全部下载方式
-            </Link>
-          </div>
-        </section>
-      </div>
     </main>
   )
 }

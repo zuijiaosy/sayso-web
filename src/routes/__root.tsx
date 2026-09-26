@@ -82,9 +82,6 @@ function Layout() {
           <a className="gh-icon" href={site.sourceUrl} aria-label="GitHub 源代码">
             <GitHubIcon />
           </a>
-          <Link to="/download" className="btn sm accent">
-            下载
-          </Link>
         </div>
       </header>
       <Outlet />

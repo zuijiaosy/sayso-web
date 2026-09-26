@@ -304,12 +304,6 @@ kbd {
   transform: translateY(0) scale(0.98);
 }
 
-.btn.sm {
-  height: 38px;
-  padding: 0 16px;
-  font-size: 14px;
-}
-
 .btn.accent {
   background: linear-gradient(135deg, var(--accent), #ff8c42 55%, var(--brand-to));
   color: #fff;
@@ -1085,77 +1079,6 @@ kbd {
 .more-link:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-/* ---------- final CTA ---------- */
-.get {
-  position: relative;
-  margin-top: clamp(80px, 12vw, 140px);
-  border-radius: 36px;
-  padding: clamp(40px, 7vw, 80px) 24px;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(135deg, #f4633a, #ff8c42 55%, #ffb347);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.get::before,
-.get::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: rgb(255 255 255 / 0.18);
-  z-index: -1;
-  animation: drift 16s ease-in-out infinite alternate;
-}
-
-.get::before {
-  width: 360px;
-  height: 360px;
-  left: -120px;
-  top: -140px;
-}
-
-.get::after {
-  width: 260px;
-  height: 260px;
-  right: -60px;
-  bottom: -120px;
-  animation-delay: -6s;
-}
-
-.get img {
-  filter: drop-shadow(0 16px 30px rgb(138 47 16 / 0.35));
-  animation: bob 5s ease-in-out infinite;
-}
-
-@keyframes bob {
-  50% {
-    transform: translateY(-8px) rotate(-3deg);
-  }
-}
-
-.get h2 {
-  margin-top: 18px;
-  font-family: var(--serif);
-  font-size: clamp(30px, 5vw, 52px);
-}
-
-.get p {
-  margin-top: 12px;
-  opacity: 0.9;
-}
-
-.get .cta .btn {
-  background: #fff;
-  color: #1f1d1a;
-}
-
-.get .cta .btn.ghost {
-  background: rgb(255 255 255 / 0.16);
-  color: #fff;
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.45);
 }
 
 /* ---------- footer ---------- */

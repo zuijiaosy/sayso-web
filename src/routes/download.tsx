@@ -25,7 +25,7 @@ function Download() {
           <span className="dot" />v{latest.version} · {date} 发布
         </span>
         <h1 style={{ marginTop: 18 }}>下载顺口说</h1>
-        <p className="lead">免费，MIT 许可证开源。下载按钮始终指向 GitHub 上最新发布的安装包，每次发版后本页自动更新。</p>
+        <p className="lead">免费，MIT 许可证开源。下载按钮指向 GitHub 上最新发布的安装包。</p>
       </div>
 
       <div className="dl-grid">
@@ -70,8 +70,8 @@ function Download() {
           <li>
             安装包没有经过 Apple 公证。确认下载来自本仓库后，在终端运行 <code>xattr -cr /Applications/Sayso.app</code>，再打开。
           </li>
-          <li>按提示授予 麦克风、辅助功能、输入监控 三项权限。</li>
-          <li>打开「系统设置 → 键盘」，把「按下 🌐 键时」改成「不执行任何操作」，否则按 Fn 会顺带切输入法。</li>
+          <li>按提示授予麦克风、辅助功能和输入监控三项权限。</li>
+          <li>打开「系统设置 → 键盘」，把「按下 🌐 键时」改成「不执行任何操作」，否则按 Fn 时会同时切换输入法。</li>
           <li>选择识别方式：下载 Qwen3-ASR 0.6B（约 811 MB）、导入已有的 SenseVoice 文件夹，或者使用云端识别。</li>
           <li>需要整理或翻译时，在「模型 → 文本模型」里填好 API Key，点「测试」。</li>
         </ol>
