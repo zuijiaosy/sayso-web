@@ -22,24 +22,18 @@ pnpm typecheck
 
 配色、圆角和字体取自客户端的 `src/styles/theme.css`：暖石色中性色、唯一的珊瑚色强调色 `#f4633a`、衬线标题。客户端改了主题后，同步 `src/styles.css` 和 `src/mock.css` 顶部的变量。
 
-## 自动更新
+## 更新和部署
 
-版本号和下载链接不写死：`scripts/fetch-release.mjs` 在每次构建前请求 GitHub API，把最新发布的版本号、日期和 .dmg / -setup.exe / .msi 的直链写进 `src/generated/release.json`（请求失败时保留已提交的文件，按钮退回到发布页）。
+站点只从本地部署，仓库里不放任何 Cloudflare 凭据，也没有自动部署的 CI。
 
-`.github/workflows/deploy.yml` 负责重新构建和发布，触发条件有三个：
-
-1. 推送到 `main`；
-2. 应用仓库发布新版本后发来的 `repository_dispatch`（事件名 `sayso-release`，由应用仓库 `release.yml` 的 `notify-website` 任务发送，需要在应用仓库配置 Secret `SITE_DISPATCH_TOKEN`：对本仓库有 Contents 写权限的 fine-grained PAT；仓库名不是 `zuijiaosy/sayso-web` 时再加 Variable `SITE_REPO`）；
-3. 每天一次的定时构建，作为兜底。
-
-本仓库需要的 Secrets：`CLOUDFLARE_API_TOKEN`（权限「Cloudflare Pages：编辑」）、`CLOUDFLARE_ACCOUNT_ID`。绑定自己的域名后，加 Variable `SITE_URL`，canonical、Open Graph 和 sitemap 都会用它。
-
-## 手动部署
+版本号和下载链接不写死：`scripts/fetch-release.mjs` 在每次构建前请求 GitHub API，把应用最新发布的版本号、日期和 .dmg / -setup.exe / .msi 的直链写进 `src/generated/release.json`（请求失败时保留已提交的文件，按钮退回到发布页）。所以应用发了新版之后，在本地重新部署一次即可：
 
 ```bash
 npx wrangler login      # 第一次使用时登录
-pnpm run deploy         # 构建并发布到 Cloudflare Pages 的 sayso 项目（--branch main）
+pnpm run deploy         # 拉取最新发布 → 构建 → 发布到 Cloudflare Pages 的 sayso 项目（--branch main）
 ```
+
+绑定自己的域名后，用 `VITE_SITE_URL=https://你的域名 pnpm run deploy` 构建，canonical、Open Graph 和 sitemap 都会用它。
 
 ## 图标
 
